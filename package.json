@@ -1,0 +1,24 @@
+{
+  "name": "homepage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run scss & live-server --open=public --entry-file=index.html",
+    "scss": "node-sass -w styles -o public/stylesheets ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filipemendes1994/homepage.git"
+  },
+  "author": "Filipe Mendes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/filipemendes1994/homepage/issues"
+  },
+  "homepage": "https://github.com/filipemendes1994/homepage#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
