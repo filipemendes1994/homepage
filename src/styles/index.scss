@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'hero';
 
 html,
 body {
@@ -8,4 +9,5 @@ body {
 
   background-color: map-get($colors, orange);
   font-family: $inter-font-family;
+  overflow-y: auto;
 }
