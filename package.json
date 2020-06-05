@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run scss & live-server --open=public --entry-file=index.html",
+    "start": "npm run scss & gulp fileinclude & live-server --open=public --entry-file=index.html",
     "scss": "node-sass -w styles -o public/stylesheets ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,5 +20,9 @@
   "homepage": "https://github.com/filipemendes1994/homepage#readme",
   "dependencies": {
     "node-sass": "^4.14.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.2.2"
   }
 }
