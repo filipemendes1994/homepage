@@ -1,4 +1,7 @@
 node_modules/
 stylesheets.map
-*.css
-*.css.map
+
+public/stylesheets/**.css
+public/stylesheets/**.css.map
+
+public/**.html
