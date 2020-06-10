@@ -1,16 +1,6 @@
 @import 'variables';
 
 .social {
-  &__headline {
-    font-size: 36px;
-    font-weight: 300;
-    color: map-get($colors, 'aqua-blue');
-
-    &:first-of-type {
-      color: map-get($colors, black);
-    }
-  }
-
   &__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
