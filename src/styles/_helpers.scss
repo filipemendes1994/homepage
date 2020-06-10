@@ -3,10 +3,10 @@
 .headline {
   font-size: 36px;
   font-weight: 300;
-  color: map-get($colors, 'aqua-blue');
+  color: map-get($colors, black);
 
   &__description {
-    color: map-get($colors, black);
+    color: map-get($colors, 'aqua-blue');
     max-width: 600px;
   }
 
