@@ -18,7 +18,7 @@ const paths = {
     dest: 'public/'
   },
   images: {
-    src: 'src/assets/*',
+    src: 'src/assets/**',
     dest: 'public/assets/'
   },
   styles: {
