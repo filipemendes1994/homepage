@@ -1,0 +1,31 @@
+@import 'variables';
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: map-get($sizes, 'size-2');
+
+  &__btn {
+    width: fit-content;
+    padding: map-get($sizes, 'size-1') map-get($sizes, 'size-2');
+
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 20px;
+    background-color: map-get($colors, 'white-almost');
+
+    &:not(:last-child) {
+      margin-right: map-get($sizes, 'size-4');
+    }
+  }
+
+  &__medium-btn {
+    width: fit-content;
+    font-size: 18px;
+    font-weight: 300;
+    color: map-get($colors, black);
+    text-decoration: underline;
+  }
+}

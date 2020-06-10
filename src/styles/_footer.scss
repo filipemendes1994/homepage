@@ -1,0 +1,23 @@
+@import 'variables';
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  margin-bottom: map-get($sizes, 'size-4');
+  margin-top: map-get($sizes, 'size-12');
+
+  font-size: 12px;
+  font-weight: 300;
+  color: map-get($colors, 'black-normal');
+
+  div:not(:first-child) {
+    font-weight: 600;
+  }
+
+  a {
+    color: initial;
+  }
+}

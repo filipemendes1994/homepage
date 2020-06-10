@@ -1,0 +1,15 @@
+.content {
+  height: fit-content;
+  margin: 0 map-get($sizes, 'size-3');
+  padding: map-get($sizes, 'size-8') calc((100% - 940px) / 2);
+
+  background-color: map-get($colors, 'white-almost');
+  border-top-left-radius: map-get($sizes, 'size-6');
+  border-top-right-radius: map-get($sizes, 'size-6');
+
+  &__greeting {
+    color: map-get($colors, 'black-normal');
+    font-size: 36px;
+    font-weight: 300;
+  }
+}
