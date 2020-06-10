@@ -2,3 +2,4 @@ node_modules/
 stylesheets.map
 public/stylesheets/
 public/**.html
+public/assets
