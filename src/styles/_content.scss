@@ -30,3 +30,18 @@
     text-decoration: underline;
   }
 }
+
+@media screen and (max-width: 1082px) {
+  .content {
+    padding: map-get($sizes, 'size-8') calc((100% - 640px) / 2);
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 740px) {
+  body {
+    .content {
+      padding: map-get($sizes, 'size-8') calc((100% - 340px) / 2);
+    }
+  }
+}
