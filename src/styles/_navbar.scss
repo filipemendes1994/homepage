@@ -4,12 +4,30 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  padding-bottom: map-get($sizes, 'size-2');
-  padding-top: map-get($sizes, 'size-2');
+  height: 69px;
+  padding: 0 120px;
 
   background-color: inherit;
   z-index: 2;
+
+  &__navigation {
+    transition: transform .1s;
+  }
+
+  &__author {
+    display: none;
+    transition: display .1s;
+
+    span {
+      color: map-get($colors, black);
+      font-size: 24px;
+
+      &:last-of-type {
+        margin-left: map-get($sizes, 'size-1');
+        font-weight: bold;
+      }
+    }
+  }
 
   &__btn {
     width: fit-content;
@@ -36,7 +54,17 @@
   &--sticky {
     position: fixed;
     top: 0;
-    width: 100%;
+    right: 0;
+    left: 0;
+    justify-content: flex-start;
+
+    .navbar__navigation {
+      transform: translateX(20%);
+    }
+
+    .navbar__author {
+      display: block;
+    }
 
     & + .navbar__filler {
       position: fixed;
