@@ -1,6 +1,6 @@
 .content {
   height: fit-content;
-  margin: 0 map-get($sizes, 'size-3');
+  margin: 0 map-get($sizes, 'size-9');
   padding: map-get($sizes, 'size-8') calc((100% - 940px) / 2);
 
   background-color: map-get($colors, 'white-almost');
@@ -37,7 +37,6 @@
   }
 }
 
-/* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 740px) {
   body {
     .content {

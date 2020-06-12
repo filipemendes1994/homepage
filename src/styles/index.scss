@@ -16,7 +16,6 @@ body {
 
   background-color: map-get($colors, orange);
   font-family: $inter-font-family;
-  overflow-y: auto;
 
   scrollbar-color: map-get($colors, orange) rgba(247, 248, 243, 0.8);
   scrollbar-width: thin;
