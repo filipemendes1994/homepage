@@ -14,9 +14,13 @@
     transition: transform .1s;
   }
 
+  &__spacer {
+    transition: all 1s ease-in-out;
+  }
+
   &__author {
     display: none;
-    transition: display .1s;
+    transform: display 1s;
 
     span {
       color: map-get($colors, black);
@@ -56,14 +60,13 @@
     top: 0;
     right: 0;
     left: 0;
-    justify-content: flex-start;
-
-    .navbar__navigation {
-      transform: translateX(20%);
-    }
 
     .navbar__author {
       display: block;
+    }
+
+    .navbar__spacer {
+      flex-grow: 1;
     }
 
     & + .navbar__filler {
