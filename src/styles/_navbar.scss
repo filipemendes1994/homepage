@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   height: 69px;
-  padding: 0 120px;
+  padding: 0 map-get($sizes, 'size-9');
 
   background-color: inherit;
   z-index: 2;
@@ -76,7 +76,7 @@
       left: 0;
       height: map-get($sizes, 'size-6');
 
-      margin: 0 map-get($sizes, 'size-9');
+      margin: 0 map-get($sizes, 'size-3');
       background-color: inherit;
       z-index: 2;
 

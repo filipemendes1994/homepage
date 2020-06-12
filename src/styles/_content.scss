@@ -1,6 +1,6 @@
 .content {
   height: fit-content;
-  margin: 0 map-get($sizes, 'size-9');
+  margin: 0 map-get($sizes, 'size-3');
   padding: map-get($sizes, 'size-8') calc((100% - 940px) / 2);
 
   background-color: map-get($colors, 'white-almost');
