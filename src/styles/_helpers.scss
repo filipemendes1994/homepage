@@ -1,7 +1,7 @@
 @import 'variables';
 
 .headline {
-  font-size: 36px;
+  font-size: map-get($sizes, 'size-6');
   font-weight: 300;
   color: map-get($colors, black);
 

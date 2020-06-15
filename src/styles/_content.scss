@@ -9,14 +9,14 @@
 
   &__greeting {
     color: map-get($colors, 'black-normal');
-    font-size: 36px;
+    font-size: map-get($sizes, 'size-6');
     font-weight: 300;
   }
 
   &__about-me {
     margin-top: map-get($sizes, 'size-3');
 
-    font-size: 36px;
+    font-size: map-get($sizes, 'size-6');
     font-weight: 500;
     max-width: 600px;
   }
@@ -25,22 +25,29 @@
     display: block;
     margin-top: map-get($sizes, 'size-3');
     color: map-get($colors, 'aqua-blue');
-    font-size: 36px;
+    font-size: map-get($sizes, 'size-6');
     font-weight: 300;
     text-decoration: underline;
   }
 }
 
-@media screen and (max-width: 1082px) {
+@media screen and (max-width: 1200px) {
   .content {
     padding: map-get($sizes, 'size-8') calc((100% - 640px) / 2);
   }
 }
 
-@media screen and (max-width: 740px) {
-  body {
-    .content {
-      padding: map-get($sizes, 'size-8') calc((100% - 340px) / 2);
-    }
+@media screen and (max-width: 992px) {
+  .content {
+    padding: map-get($sizes, 'size-8') calc((100% - 440px) / 2);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .content {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: map-get($sizes, 'size-6');
+    padding-right: map-get($sizes, 'size-6');
   }
 }

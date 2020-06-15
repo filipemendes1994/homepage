@@ -9,8 +9,9 @@
   margin-bottom: map-get($sizes, 'size-4');
   margin-top: map-get($sizes, 'size-12');
 
-  font-size: 12px;
+  font-size: map-get($sizes, 'size-2');
   font-weight: 300;
+  text-align: center;
   color: map-get($colors, 'black-normal');
 
   div:not(:first-child) {

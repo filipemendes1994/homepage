@@ -19,6 +19,7 @@
 
   &__img-container {
     width: 100%;
+    max-width: 100%;
     position: relative;
 
     img, .overlay {
@@ -29,6 +30,7 @@
     }
 
     .overlay {
+      height: 100%;
       display: flex;
       align-items: center;
       transition: .2s ease;
@@ -37,37 +39,43 @@
       top: 0;
       bottom: 0;
 
+      background-color: map-get($colors, 'white-almost');
+      cursor: pointer;
+
       img {
         height: 80%;
         object-fit: contain;
       }
     }
 
-    &:hover {
-      img {
-        opacity: 0.2;
-      }
-
-      .overlay {
-        cursor: pointer;
-        opacity: 1;
-
-        img {
-          opacity: 0.7;
-        }
-      }
+    &:hover .overlay {
+      opacity: 1 !important;
     }
   }
 
   &__item-title {
-    width: 100%;
-    margin-top: map-get($sizes, 'size-2');
+    width: fit-content;
+    margin-right: auto;
+    padding-top: map-get($sizes, 'size-2');
     margin-bottom: map-get($sizes, 'size-1');
-    font-size: 18px;
+    font-size: map-get($sizes, 'size-3');
+    cursor: pointer;
+  }
+
+  &__item-edition {
+    width: 100%;
+    font-size: map-get($sizes, 'size-2');
+    margin-bottom: map-get($sizes, 'size-1');
+  }
+
+  &__item-role {
+    width: 100%;
+    font-size: map-get($sizes, 'size-2');
+    font-weight: bold;
   }
 
   &__item-description {
-    font-size: 12px;
+    font-size: map-get($sizes, 'size-2');
     font-weight: 300;
   }
 }
