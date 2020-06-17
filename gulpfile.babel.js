@@ -64,7 +64,7 @@ export function images() {
 
 function html() {
   const sources = gulp.src([`${paths.js.dest}*.js`], { read: false });
-  return gulp.src(`${paths.root.src}templates/*.html`)
+  return gulp.src(`${paths.root.src}templates/**/*.html`)
     .pipe(inject(sources, { ignorePath: 'public' }))
     .pipe(fileinclude({
       prefix: '@@',
