@@ -1,0 +1,14 @@
+@import 'variables';
+@import 'navbar';
+
+:root {
+  --background-color: #{map-get($colors, 'blue-ocean')};
+}
+
+.navbar__btn:first-of-type {
+  color: var(--background-color);
+}
+
+.navbar {
+  @extend .navbar--sticky;
+}
