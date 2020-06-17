@@ -36,15 +36,21 @@
   &__btn {
     display: inline-block;
     width: fit-content;
-    padding: map-get($sizes, 'size-1') map-get($sizes, 'size-2');
+    padding: map-get($sizes, 'size-1') + map-get($sizes, 'size-1') / 2 map-get($sizes, 'size-3');
 
     font-size: map-get($sizes, 'size-3');
     font-weight: 500;
     border-radius: 20px;
     background-color: map-get($colors, 'white-almost');
 
+    cursor: pointer;
+
     &:not(:last-child) {
       margin-right: map-get($sizes, 'size-4');
+    }
+
+    &:hover {
+      color: var(--background-color);
     }
   }
 

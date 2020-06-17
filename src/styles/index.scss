@@ -14,10 +14,10 @@ body {
   margin: 0;
   padding: 0;
 
-  background-color: map-get($colors, orange);
+  background-color: var(--background-color);
   font-family: $inter-font-family;
 
-  scrollbar-color: map-get($colors, orange) rgba(247, 248, 243, 0.8);
+  scrollbar-color: var(--background-color) rgba(247, 248, 243, 0.8);
   scrollbar-width: thin;
 }
 
