@@ -16,6 +16,17 @@
     font-weight: 300;
   }
 
+  &__name {
+    text-align: left;
+    font-size: 144px;
+    font-weight: bold;
+    line-height: 0.92;
+
+    &:nth-child(2) {
+      margin-bottom: map-get($sizes, 'size-8');
+    }
+  }
+
   &__about-me {
     margin-top: map-get($sizes, 'size-3');
 

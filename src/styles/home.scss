@@ -1,4 +1,7 @@
 @import 'variables';
+@import 'hero';
+@import 'organizations';
+@import 'projects';
 
 :root {
   --background-color: #{map-get($colors, orange)};

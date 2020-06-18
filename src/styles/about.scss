@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'navbar';
+@import 'testimonials';
 
 :root {
   --background-color: #{map-get($colors, 'blue-ocean')};
@@ -11,4 +12,8 @@
 
 .navbar {
   @extend .navbar--sticky;
+}
+
+.content__about-me {
+  font-weight: 300;
 }
