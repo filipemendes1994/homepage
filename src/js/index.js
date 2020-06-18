@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  document.getElementsByClassName('content')[0].style.opacity = 1;
+  document.getElementsByClassName('navbar__filler')[0].style.opacity = 1;
   watchNavbarPosition();
   randomQuote();
 });
@@ -32,6 +34,34 @@ const leaveOrganizationTitle = (evt) => {
   evt.parentElement.children[0].children[1].style.opacity = 0;
 }
 
+const mapColorsPages = {
+  'about.html': '#23B5D3',
+  'projects.html': '#83A0A0'
+};
+
+const transitionToPage = (location) => {
+  const navbar = document.getElementsByClassName('navbar')[0];
+  navbar.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+
+  const content = document.getElementsByClassName('content')[0];
+  content.style.opacity = 0;
+
+  document.querySelector('html').style.backgroundColor = mapColorsPages[location];
+  const body = document.querySelector('body');
+  body.style.backgroundColor = mapColorsPages[location];
+
+  const navbarFiller = document.getElementsByClassName('navbar__filler')[0];
+  navbarFiller.style.opacity = 0;
+  navbarFiller.style.backgroundColor = mapColorsPages[location];
+
+  const navbarBtns = document.getElementsByClassName('navbar__btn');
+  [...navbarBtns].forEach(btn => btn.style.color = '#293132');
+
+  setTimeout(() => window.location.href = location, 500);
+};
 
 const quotes = [
   "The Internet?  Is that thing still around?",
