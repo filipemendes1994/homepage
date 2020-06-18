@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   document.getElementsByClassName('content')[0].style.opacity = 1;
   document.getElementsByClassName('navbar__filler')[0].style.opacity = 1;
   watchNavbarPosition();
@@ -19,19 +19,11 @@ const watchNavbarPosition = () => {
     )
     .subscribe(() => {
       if (window.pageYOffset >= offsetTop) {
-        navbar.classList.add("navbar--sticky");
+        navbar.classList.add('navbar--sticky');
       } else {
-        navbar.classList.remove("navbar--sticky");
+        navbar.classList.remove('navbar--sticky');
       }
     });
-}
-
-const hoverOrganizationTitle = (evt) => {
-  evt.parentElement.children[0].children[1].style.opacity = 1;
-}
-
-const leaveOrganizationTitle = (evt) => {
-  evt.parentElement.children[0].children[1].style.opacity = 0;
 }
 
 const mapColorsPages = {
@@ -64,11 +56,11 @@ const transitionToPage = (location) => {
 };
 
 const quotes = [
-  "The Internet?  Is that thing still around?",
-  "The Web is like a dominatrix.  Everywhere I turn, I see little buttons ordering me to Submit.",
-  "Any fool can use a computer.  Many do.",
-  "Don’t worry if it doesn’t work right.  If everything did, you’d be out of a job.",
-  "I don’t care if it works on your machine!  We are not shipping your machine!"
+  'The Internet?  Is that thing still around?',
+  'The Web is like a dominatrix.  Everywhere I turn, I see little buttons ordering me to Submit.',
+  'Any fool can use a computer.  Many do.',
+  'Don’t worry if it doesn’t work right.  If everything did, you’d be out of a job.',
+  'I don’t care if it works on your machine!  We are not shipping your machine!'
 ];
 
 const randomQuote = () => {
