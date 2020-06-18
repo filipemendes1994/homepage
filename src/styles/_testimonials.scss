@@ -1,0 +1,78 @@
+@import 'variables';
+
+.testimonials {
+  display: flex;
+  justify-content: center;
+  margin-left: map-get($sizes, 'size-13');
+  margin-top: map-get($sizes, 'size-11');
+
+  &__container {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+  }
+
+  &__item {
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-gap: map-get($sizes, 'size-3');
+    justify-content: center;
+    padding: 0 100px;
+    box-sizing: border-box;
+  }
+
+  &__item-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__item-content {
+    max-width: 300px;
+  }
+
+  &__item-author,
+  &__item-author-role {
+    font-size: map-get($sizes, 'size-3');
+  }
+
+  &__item-author {
+    font-weight: 600;
+  }
+
+  &__item-author-role {
+    font-weight: 300;
+  }
+
+  &__item-description {
+    font-size: map-get($sizes, 'size-2');
+    font-weight: 300;
+    white-space: pre-line;
+
+    .more {
+      display: none;
+      margin-top: map-get($sizes, 'size-2') * -1;
+      white-space: pre-line;
+    }
+
+    .view-more {
+      display: block;
+      margin-top: map-get($sizes, 'size-6') * -1;
+      color: map-get($colors, 'aqua-blue');
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  &__arrow {
+    margin-top: map-get($sizes, 'size-7');
+    height: fit-content;
+    color: map-get($colors, 'aqua-blue');
+    font-size: map-get($sizes, 'size-8');
+    font-weight: 500;
+    cursor: pointer;
+  }
+}
