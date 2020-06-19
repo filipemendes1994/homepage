@@ -17,19 +17,30 @@ const readMoreText = (idx) => {
 };
 
 const scrollTestimonial = (way) => {
-  console.log(way);
   const scrollContainer = document.getElementsByClassName('testimonials__container')[0];
 
   if (way === 'right') {
     if (scrollContainer.scrollLeft + scrollContainer.clientWidth === scrollContainer.scrollWidth) {
-      scrollContainer.insertBefore(scrollContainer.children[0], null);
+      scrollContainer.insertBefore(scrollContainer.children[0].cloneNode(true), null);
+      scrollContainer.scrollLeft += scrollContainer.children[0].clientWidth;
+      setTimeout(() => scrollContainer.removeChild(scrollContainer.children[0]), 400);
+    } else {
+      scrollContainer.scrollLeft += scrollContainer.children[0].clientWidth;
     }
-
-    scrollContainer.scrollLeft += scrollContainer.children[0].clientWidth;
   } else {
     if (scrollContainer.scrollLeft === 0) {
-      scrollContainer.insertBefore(scrollContainer.children[scrollContainer.children.length - 1], scrollContainer.children[0]);
+      scrollContainer.style.scrollBehavior = 'auto';
+      scrollContainer.insertBefore(
+        scrollContainer.children[scrollContainer.children.length - 1].cloneNode(true),
+        scrollContainer.children[0]
+      );
+      scrollContainer.scrollLeft += scrollContainer.children[0].clientWidth;
+
+      scrollContainer.style.scrollBehavior = 'smooth';
+      scrollContainer.scrollLeft -= scrollContainer.children[0].clientWidth;
+      setTimeout(() => scrollContainer.removeChild(scrollContainer.children[scrollContainer.children.length - 1]), 400);
+    } else {
+      scrollContainer.scrollLeft -= scrollContainer.children[0].clientWidth;
     }
-    scrollContainer.scrollLeft -= scrollContainer.children[0].clientWidth;
   }
 }

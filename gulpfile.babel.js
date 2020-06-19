@@ -87,7 +87,7 @@ function watch() {
   gulp.watch(paths.js.src, scripts);
   gulp.watch(paths.styles.src, styles);
   gulp.watch(paths.images.src, images);
-  gulp.watch(`${paths.root.src}templates/*.html`, html);
+  gulp.watch(`${paths.root.src}templates/**/*.html`, html);
 }
 
 const build = gulp.series(clean, scripts, styles, images, copyRootFiles, html, serve, watch);
