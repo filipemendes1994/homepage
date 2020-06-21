@@ -1,7 +1,8 @@
-const readMoreText = (idx) => {
-  const dots = document.getElementsByClassName('dots')[idx];
-  const moreText = document.getElementsByClassName('more')[idx];
-  const btnText = document.getElementsByClassName('view-more')[idx];
+const readMoreText = (id) => {
+  const item = document.getElementById(id);
+  const dots = item.getElementsByClassName('dots')[0];
+  const moreText = item.getElementsByClassName('more')[0];
+  const btnText = item.getElementsByClassName('view-more')[0];
 
   if (dots.style.display === 'none') {
     dots.style.display = 'inline';
