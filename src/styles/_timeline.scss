@@ -1,0 +1,131 @@
+@import 'variables';
+
+.timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  margin-top: map-get($sizes, 'size-8');
+  margin-left: map-get($sizes, 'size-3');
+
+  &__top-sign {
+    position: absolute;
+    left: 115.3px;
+    top: map-get($sizes, 'size-2') * -1;
+
+    width: map-get($sizes, 'size-2');
+    height: map-get($sizes, 'size-2');
+
+    background-color: map-get($colors, 'blue-ocean');
+    border-radius: 50%;
+  }
+
+  &__separator {
+    position: absolute;
+    top: 141px;
+    left: calc(var(--window-width) * -1);
+    height: 142px;
+    width: calc(var(--window-width) * 10);
+
+    background-image: linear-gradient(to bottom, #{map-get($colors, 'blue-ocean')}, rgba(247, 248, 243, 0));
+  }
+
+  &__bottom-sign {
+    height: map-get($sizes, 'size-6');
+    max-width: map-get($sizes, 'size-16') + map-get($sizes, 'size-1');
+    min-width: map-get($sizes, 'size-16') + map-get($sizes, 'size-1');
+
+    padding-right: map-get($sizes, 'size-3');
+    border-right: 2px solid map-get($colors, 'blue-ocean');
+    border-right-style: dashed;
+
+    opacity: .5;
+  }
+
+  &__get-in-touch-btn {
+    width: fit-content;
+    padding: map-get($sizes, 'size-1') * 1.5 map-get($sizes, 'size-3');
+    margin-top: map-get($sizes, 'size-2');
+    border-radius: map-get($sizes, 'size-3') + 1.5px;
+
+    font-weight: 600;
+    color: map-get($colors, 'white-almost');
+
+    background-color: map-get($colors, 'blue-ocean');
+    cursor: pointer;
+  }
+
+  &__date {
+    max-width: map-get($sizes, 'size-16') + map-get($sizes, 'size-1');
+    min-width: map-get($sizes, 'size-16') + map-get($sizes, 'size-1');
+    padding-right: map-get($sizes, 'size-3');
+    padding-bottom: 120px;
+    border-right: 2px solid map-get($colors, 'blue-ocean');
+
+    font-size: map-get($sizes, 'size-3');
+    font-weight: 300;
+    text-align: right;
+    white-space: pre-line;
+
+    &:nth-child(n + 3) {
+      color: rgba(map-get($colors, black), .5);
+    }
+  }
+
+  &__description {
+    max-width: 200px;
+    padding-left: map-get($sizes, 'size-3');
+
+    &:nth-child(3) {
+      padding-bottom: 238px;
+    }
+
+    &:nth-child(n + 4) {
+      display: flex;
+      flex-direction: row;
+      max-width: 320px;
+      padding-bottom: map-get($sizes, 'size-8');
+      opacity: .5;
+
+      > div {
+        margin-left: map-get($sizes, 'size-3');
+      }
+    }
+  }
+
+  &__description-title {
+    font-weight: bold;
+  }
+
+  &__description-content,
+  &__description-links {
+    margin-top: map-get($sizes, 'size-2');
+  }
+
+  &__description-links {
+    a {
+      display: block;
+
+      &:not(:last-child) {
+        margin-bottom: map-get($sizes, 'size-1');
+      }
+    }
+  }
+
+  &__img {
+    width: map-get($sizes, 'size-12');
+    height: map-get($sizes, 'size-12');
+    padding: map-get($sizes, 'size-1');
+
+    &--wit {
+      background-color: #0545ed;
+    }
+
+    &--spms {
+      background-color: #ed0505;
+    }
+
+    &--stratio {
+      background-color: map-get($colors, orange);
+    }
+  }
+}

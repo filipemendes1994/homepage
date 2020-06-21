@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'navbar';
 @import 'testimonials';
+@import 'timeline';
 
 :root {
   --background-color: #{map-get($colors, 'blue-ocean')};

@@ -1,9 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementsByClassName('content')[0].style.opacity = 1;
   document.getElementsByClassName('navbar__filler')[0].style.opacity = 1;
+  setWidthCSSVariable();
+  trackWindowsWidth();
   watchNavbarPosition();
   randomQuote();
 });
+
+const trackWindowsWidth = () => {
+  rxjs.fromEvent(window, 'resize', { passive: true })
+    .pipe(
+      rxjs.operators.distinctUntilChanged(),
+    ).subscribe(() => setWidthCSSVariable());
+};
+
+const setWidthCSSVariable = () => {
+  document.documentElement.style.setProperty('--window-width', `${window.innerWidth}px`);
+};
 
 const watchNavbarPosition = () => {
   const navbar = document.getElementsByClassName('navbar')[0];
@@ -24,7 +37,7 @@ const watchNavbarPosition = () => {
         navbar.classList.remove('navbar--sticky');
       }
     });
-}
+};
 
 const mapColorsPages = {
   'about.html': '#23B5D3',
