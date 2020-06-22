@@ -37,8 +37,6 @@
     padding-right: map-get($sizes, 'size-3');
     border-right: 2px solid map-get($colors, 'blue-ocean');
     border-right-style: dashed;
-
-    opacity: .5;
   }
 
   &__get-in-touch-btn {

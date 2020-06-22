@@ -74,5 +74,6 @@
     font-size: map-get($sizes, 'size-8');
     font-weight: 500;
     cursor: pointer;
+    user-select: none;
   }
 }

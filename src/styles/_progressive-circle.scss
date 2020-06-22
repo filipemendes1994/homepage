@@ -1,0 +1,18 @@
+@import 'variables';
+
+.progressive-circle {
+  width: map-get($sizes, 'size-10');
+  height: map-get($sizes, 'size-10');
+  transform: rotate(180deg);
+
+  circle {
+    stroke: rgba(map-get($colors, 'blue-ocean'), .3);
+    stroke-width: map-get($sizes, 'size-2');
+    fill: transparent;
+
+    &:last-of-type {
+      stroke: map-get($colors, 'blue-ocean');
+      z-index: 3;
+    }
+  }
+}

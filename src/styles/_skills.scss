@@ -1,0 +1,30 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  margin-top: map-get($sizes, 'size-5');
+
+  &__item {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    grid-gap: map-get($sizes, 'size-3');
+    margin-bottom: map-get($sizes, 'size-5');
+  }
+
+  &__item-img {
+    width: map-get($sizes, 'size-10');
+    height: map-get($sizes, 'size-10');
+  }
+
+  &__item-description {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item-description-title {
+    font-weight: bold;
+  }
+
+  &__item-description-content {
+    font-weight: 300;
+  }
+}

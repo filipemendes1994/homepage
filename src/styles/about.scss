@@ -2,6 +2,8 @@
 @import 'navbar';
 @import 'testimonials';
 @import 'timeline';
+@import 'skills';
+@import 'progressive-circle';
 
 :root {
   --background-color: #{map-get($colors, 'blue-ocean')};
