@@ -1,0 +1,36 @@
+@import 'variables';
+
+.hobbies {
+  display: flex;
+  flex-direction: row;
+  margin-top: map-get($sizes, 'size-5');
+
+  &__chart {
+    position: relative;
+    min-width: 223px;
+    height: 223px;
+    margin-right: map-get($sizes, 'size-3');
+
+    .progressive-circle__item {
+      stroke-width: map-get($sizes, 'size-4');
+
+      &:not(:first-child):hover,
+      &--active {
+        stroke-width: map-get($sizes, 'size-5') !important;
+      }
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__description-title {
+    font-weight: bold;
+  }
+
+  &__description-content {
+    font-weight: 300;
+  }
+}

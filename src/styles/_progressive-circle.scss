@@ -1,18 +1,42 @@
 @import 'variables';
 
 .progressive-circle {
-  width: map-get($sizes, 'size-10');
-  height: map-get($sizes, 'size-10');
+  width: 100%;
+  height: 100%;
   transform: rotate(180deg);
 
+  &__item,
   circle {
     stroke: rgba(map-get($colors, 'blue-ocean'), .3);
     stroke-width: map-get($sizes, 'size-2');
     fill: transparent;
 
-    &:last-of-type {
-      stroke: map-get($colors, 'blue-ocean');
-      z-index: 3;
+    &:first-of-type {
+      pointer-events: none;
+    }
+
+    &:not(:first-of-type):hover,
+    &--active {
+      stroke: map-get($colors, 'blue-ocean') !important;
+    }
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    width: calc(100% - #{map-get($sizes, 'size-5')} * 2);
+    height: calc(100% - #{map-get($sizes, 'size-5')} * 2);
+    margin: map-get($sizes, 'size-5');
+    border: none;
+    border-radius: 50%;
+
+    overflow: hidden;
+    pointer-events: none;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   }
 }

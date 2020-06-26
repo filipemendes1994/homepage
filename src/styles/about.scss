@@ -4,12 +4,13 @@
 @import 'timeline';
 @import 'skills';
 @import 'progressive-circle';
+@import 'hobbies';
 
 :root {
   --background-color: #{map-get($colors, 'blue-ocean')};
 }
 
-.navbar__btn:first-of-type {
+.navbar__btn:nth-of-type(2) {
   color: var(--background-color);
 }
 
@@ -19,4 +20,19 @@
 
 .content__about-me {
   font-weight: 300;
+}
+
+.paralell-section {
+  display: flex;
+  flex-direction: row;
+
+  &__item {
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .paralell-section {
+    flex-direction: column;
+  }
 }

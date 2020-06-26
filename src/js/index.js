@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementsByClassName('content')[0].style.opacity = 1;
   document.getElementsByClassName('navbar__filler')[0].style.opacity = 1;
+
+  if (window.location.pathname === '/index.html') {
+    document.getElementsByClassName('navbar__navigation')[0].children[0].style.display = 'none';
+  }
+
   setWidthCSSVariable();
   trackWindowsWidth();
   watchNavbarPosition();

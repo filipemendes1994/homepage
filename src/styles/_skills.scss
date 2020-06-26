@@ -15,6 +15,15 @@
     height: map-get($sizes, 'size-10');
   }
 
+  &__item-chart {
+    width: map-get($sizes, 'size-10');
+    height: map-get($sizes, 'size-10');
+
+    circle:not(:first-of-type) {
+      stroke: map-get($colors, 'blue-ocean');
+    }
+  }
+
   &__item-description {
     display: flex;
     flex-direction: column;

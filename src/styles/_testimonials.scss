@@ -26,6 +26,7 @@
   &__item-img {
     width: 140px;
     height: 140px;
+    justify-self: center;
     border-radius: 50%;
     object-fit: cover;
   }
@@ -75,5 +76,12 @@
     font-weight: 500;
     cursor: pointer;
     user-select: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .testimonials__item {
+    grid-template-columns: unset;
+    grid-template-rows: max-content auto;
   }
 }
