@@ -6,3 +6,7 @@
 :root {
   --background-color: #{map-get($colors, orange)};
 }
+
+.navbar__btn:first-child {
+  display: none;
+}
