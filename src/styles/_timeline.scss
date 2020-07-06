@@ -10,7 +10,7 @@
   &__top-sign {
     position: absolute;
     left: 115.3px;
-    top: map-get($sizes, 'size-2') * -1;
+    top: 0;
 
     width: map-get($sizes, 'size-2');
     height: map-get($sizes, 'size-2');
