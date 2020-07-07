@@ -1,7 +1,6 @@
 @import 'variables';
 
 .timeline {
-  position: relative;
   display: grid;
   grid-template-columns: max-content max-content;
   margin-top: map-get($sizes, 'size-8');
@@ -21,9 +20,10 @@
 
   &__separator {
     position: absolute;
+    left: 0;
+    right: 0;
     top: 141px;
     height: 142px;
-    min-width: calc(var(--window-width));
 
     background-image: linear-gradient(to bottom, #{map-get($colors, 'blue-ocean')}, rgba(247, 248, 243, 0));
   }
