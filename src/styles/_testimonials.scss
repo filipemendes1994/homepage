@@ -1,6 +1,7 @@
 @import 'variables';
 
 .testimonials {
+  position: relative;
   display: flex;
   justify-content: center;
   margin-left: map-get($sizes, 'size-13');
@@ -80,8 +81,37 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .testimonials__item {
-    grid-template-columns: unset;
-    grid-template-rows: max-content auto;
+  .testimonials {
+    margin-left: 0;
+
+    &__item {
+      grid-template-columns: unset;
+      grid-template-rows: max-content auto;
+      padding: 0 map-get($sizes, 'size-3');
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .testimonials {
+    &__item {
+      padding: 0 !important;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .testimonials {
+    &__arrow {
+      position: absolute;
+
+      &:first-child {
+        left: 0;
+      }
+
+      &:last-child {
+        right: 0;
+      }
+    }
   }
 }

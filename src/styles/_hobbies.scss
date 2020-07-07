@@ -34,3 +34,15 @@
     font-weight: 300;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .hobbies {
+    flex-direction: column;
+
+    &__chart {
+      width: fit-content;
+      margin-right: auto;
+      margin-bottom: map-get($sizes, 'size-3');
+    }
+  }
+}

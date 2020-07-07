@@ -22,9 +22,8 @@
   &__separator {
     position: absolute;
     top: 141px;
-    left: calc(var(--window-width) * -1);
     height: 142px;
-    width: calc(var(--window-width) * 10);
+    min-width: calc(var(--window-width));
 
     background-image: linear-gradient(to bottom, #{map-get($colors, 'blue-ocean')}, rgba(247, 248, 243, 0));
   }
@@ -124,6 +123,32 @@
 
     &--stratio {
       background-color: map-get($colors, orange);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .timeline {
+    grid-template-columns: max-content auto;
+    margin-left: 0;
+
+    &__date,
+    &__bottom-sign {
+      min-width: map-get($sizes, 'size-9');
+      max-width: map-get($sizes, 'size-9');
+    }
+
+    &__top-sign {
+      left: 67.5px;
+    }
+
+    &__description {
+      flex-direction: column !important;
+
+      > div {
+        margin-left: 0 !important;
+        margin-top: map-get($sizes, 'size-2');
+      }
     }
   }
 }

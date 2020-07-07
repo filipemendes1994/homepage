@@ -54,6 +54,14 @@
 @media screen and (max-width: 992px) {
   .content {
     padding: map-get($sizes, 'size-8') calc((100% - 440px) / 2);
+
+    &__name {
+      font-size: map-get($sizes, 'size-15');
+    }
+
+    &__about-me {
+      font-size: map-get($sizes, 'size-4');
+    }
   }
 }
 
@@ -63,5 +71,9 @@
     margin-right: 0;
     padding-left: map-get($sizes, 'size-6');
     padding-right: map-get($sizes, 'size-6');
+
+    &__name {
+      font-size: map-get($sizes, 'size-11');
+    }
   }
 }
