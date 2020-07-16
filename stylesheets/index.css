@@ -71,7 +71,8 @@
     color: #83A0A0;
     font-size: 36px;
     font-weight: 300;
-    text-decoration: underline; }
+    text-decoration: underline;
+    cursor: pointer; }
 
 @media screen and (max-width: 1200px) {
   .content {
@@ -81,14 +82,20 @@
 @media screen and (max-width: 992px) {
   .content {
     padding: 48px -webkit-calc((100% - 440px) / 2);
-    padding: 48px calc((100% - 440px) / 2); } }
+    padding: 48px calc((100% - 440px) / 2); }
+    .content__name {
+      font-size: 90px; }
+    .content__about-me {
+      font-size: 24px; } }
 
 @media screen and (max-width: 576px) {
   .content {
     margin-left: 0;
     margin-right: 0;
     padding-left: 36px;
-    padding-right: 36px; } }
+    padding-right: 36px; }
+    .content__name {
+      font-size: 66px; } }
 
 .navbar {
   display: -webkit-box;
@@ -268,7 +275,8 @@ body {
   -o-transition: background-color .5s;
   transition: background-color .5s;
   scrollbar-color: var(--background-color) rgba(247, 248, 243, 0.8);
-  scrollbar-width: thin; }
+  scrollbar-width: thin;
+  scroll-behavior: smooth; }
 
 ::-webkit-scrollbar {
   width: 10px; }

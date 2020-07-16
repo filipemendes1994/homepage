@@ -122,6 +122,8 @@
 .organizations__item-description {
   font-size: 12px;
   font-weight: 300; }
+  .organizations__item-description > *:not(:last-child) {
+    margin-bottom: 6px; }
 
 .projects {
   display: grid;
@@ -170,3 +172,6 @@
 
 :root {
   --background-color: #FF715B; }
+
+.navbar__btn:first-child {
+  display: none; }
