@@ -28,8 +28,13 @@
     width: 140px;
     height: 140px;
     justify-self: center;
-    border-radius: 50%;
-    object-fit: cover;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
   }
 
   &__item-content {
@@ -52,20 +57,22 @@
   &__item-description {
     font-size: map-get($sizes, 'size-2');
     font-weight: 300;
-    white-space: pre-line;
+    margin-top: map-get($sizes, 'size-2');
 
     .more {
       display: none;
       margin-top: map-get($sizes, 'size-2') * -1;
-      white-space: pre-line;
     }
 
     .view-more {
       display: block;
-      margin-top: map-get($sizes, 'size-6') * -1;
       color: map-get($colors, 'aqua-blue');
       text-decoration: underline;
       cursor: pointer;
+    }
+
+    div:not(:last-child) {
+      margin-bottom: map-get($sizes, 'size-1');
     }
   }
 

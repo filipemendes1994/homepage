@@ -7,16 +7,22 @@
 
   &__chart {
     position: relative;
-    min-width: 223px;
-    height: 223px;
+    min-width: 220px;
+    max-width: 220px;
+    height: 220px;
     margin-right: map-get($sizes, 'size-3');
 
-    .progressive-circle__item {
-      stroke-width: map-get($sizes, 'size-4');
+    .progressive-circle {
+      display: block;
+      margin: auto;
 
-      &:not(:first-child):hover,
-      &--active {
-        stroke-width: map-get($sizes, 'size-5') !important;
+      &__item {
+        stroke-width: map-get($sizes, 'size-4');
+
+        &:not(:first-child):hover,
+        &--active {
+          stroke-width: map-get($sizes, 'size-5') !important;
+        }
       }
     }
   }
@@ -42,6 +48,7 @@
     &__chart {
       width: fit-content;
       margin-right: auto;
+      margin-left: auto;
       margin-bottom: map-get($sizes, 'size-3');
     }
   }
