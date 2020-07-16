@@ -7,13 +7,12 @@ const readMoreText = (id) => {
   if (dots.style.display === 'none') {
     dots.style.display = 'inline';
     btnText.innerHTML = 'View More';
-    btnText.style.marginTop = '-36px';
     moreText.style.display = 'none';
   } else {
     dots.style.display = 'none';
     btnText.innerHTML = 'View less';
-    btnText.style.marginTop = '-6px';
-    moreText.style.display = 'inline-block';
+    btnText.style.marginTop = '6px';
+    moreText.style.display = 'contents';
   }
 };
 

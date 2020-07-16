@@ -13,6 +13,7 @@
   &__item-img {
     width: map-get($sizes, 'size-10');
     height: map-get($sizes, 'size-10');
+    object-fit: cover;
   }
 
   &__item-chart {

@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         partial.style.strokeDasharray = `${circumference} ${circumference}`;
         partial.style.strokeDashoffset = circumference - dataset.progress / 100 * circumference;
-        partial.setAttribute('transform', `rotate(${startingPoint}, 111.5, 111.5)`);
+        partial.setAttribute('transform', `rotate(${startingPoint}, 110, 110)`);
 
         startingPoint += dataset.progress / 100 * 360;
 
