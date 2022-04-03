@@ -74,5 +74,11 @@ if (window.location.href.endsWith('about.html')) {
     handleTopSignPosition();
     handleTopSignScroll();
     handleSeparator();
+    getYear();
   });
+}
+
+const getYear = () => {
+  const dateContainer = document.getElementsByClassName('timeline__date')[0];
+  dateContainer.textContent = new Date().getFullYear();
 }
